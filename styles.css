@@ -1,0 +1,165 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #8B4513;
+    padding: 20px;
+    text-align: center;
+    color: white; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url('img/half-shot-wooden-sapoons-empty-plastic-coffee-pot-dark-surface.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    text-align: center; 
+    padding: 50px 0; 
+}
+
+#main-content {
+    background-image: url('background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
+    text-align: center;
+    padding: 50px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.main-text {
+    max-width: 600px; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#prev-recipe {
+    border-radius: 20px;
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#next-recipe {
+    border-radius: 20px;
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px; 
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#recipe-details {
+    margin-top: 20px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+}
+
+.recipe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 100%; 
+}
+
+.recipe {
+    margin-top: -25px; 
+    flex-basis: calc(33.33% - 20px);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+@media screen and (max-width: 768px) {
+    .recipe {
+        flex-basis: calc(50% - 20px); /* Ширина каждого рецепта 50% на экранах с шириной до 768px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .recipe {
+        flex-basis: calc(100% - 20px); /* Ширина каждого рецепта 100% на экранах с шириной до 480px */
+    }
+}
+
+
+#recipe-details img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#recipe-details ul, #recipe-details ol {
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.search-container input[type="text"] {
+    padding: 10px; 
+    margin-right: 5px; 
+}
+
+.search-container input[type="text"] {
+    padding: 10px; 
+    margin-right: 5px; 
+    border-radius: 20px; 
+    width: 300px;
+}
+
+.search-container button {
+    padding: 12px 24px; 
+    border: none;
+    border-radius: 20px; 
+    background-color: #2ecc71; 
+    color: #fff; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-button {
+    padding: 12px 24px; 
+    border: none;
+    border-radius: 20px;
+    background-color: #f12c05; 
+    color: #fff; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
