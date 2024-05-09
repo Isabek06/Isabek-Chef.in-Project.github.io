@@ -7,12 +7,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const searchButton = document.getElementById('search-button');
+    const mainContent = document.getElementById('main-content');
+    mainContent.style.display = 'none';
+
     searchButton.addEventListener('click', async function () {
         const searchTerm = document.getElementById('search-input').value;
         const recipes = await fetchRecipes(searchTerm);
         displayRecipeDetails(recipes);
+        showRecipeNavigation(); 
     });
-
     
     const recipeDetailsContainer = document.getElementById('recipe-details');
     recipeDetailsContainer.addEventListener('click', function(event) {
@@ -22,28 +25,21 @@ document.addEventListener('DOMContentLoaded', function () {
             switchRecipe(1);
         }
     });
-
-    function displayRecipeDetails(recipes) {
-        currentRecipeIndex = 0;
-        currentRecipes = recipes;
-        showRecipe();
-        showRecipeNavigation();
-    }
-
-    function showRecipeNavigation() {
-        const prevRecipeButton = document.getElementById('prev-recipe');
-        const nextRecipeButton = document.getElementById('next-recipe');
-        prevRecipeButton.style.display = 'block'; 
-        nextRecipeButton.style.display = 'block'; 
-    }
-
-    searchButton.addEventListener('click', async function () {
-        const searchTerm = document.getElementById('search-input').value;
-        const recipes = await fetchRecipes(searchTerm);
-        displayRecipeDetails(recipes);
-        showRecipeNavigation(); 
-    });
 });
+
+function displayRecipeDetails(recipes) {
+    currentRecipeIndex = 0;
+    currentRecipes = recipes;
+    showRecipe();
+    showRecipeNavigation();
+}
+
+function showRecipeNavigation() {
+    const prevRecipeButton = document.getElementById('prev-recipe');
+    const nextRecipeButton = document.getElementById('next-recipe');
+    prevRecipeButton.style.display = 'block'; 
+    nextRecipeButton.style.display = 'block'; 
+}
 
 let currentRecipeIndex = 0;
 let currentRecipes = [];
